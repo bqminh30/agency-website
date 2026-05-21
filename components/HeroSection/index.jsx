@@ -39,7 +39,7 @@ import { useLanguage } from "../LanguageContext";
 const Character = styled(motion.span)`
   display: inline-block;
   margin-right: 0;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   font-weight: 800;
   font-size: 150px;
   line-height: 190px;
@@ -138,18 +138,18 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-            >{isVi ? "Chung toi xay dung giai phap, khong chi la website" : "We Build Solutions, Not Just Websites"}</Heading>
+            >{isVi ? "Chúng tôi xây dựng giải pháp, không chỉ là website" : "We Build Solutions, Not Just Websites"}</Heading>
 
             <HeroDescription
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
             >
-              {isVi ? "Chung toi tao ra giai phap mang lai ket qua, khong chi la mot giao dien dep." : "We build solutions that get results, not just a pretty website"}
+              {isVi ? "Chúng tôi tạo ra giải pháp mang lại kết quả, không chỉ là một giao diện đẹp." : "We build solutions that get results, not just a pretty website"}
             </HeroDescription>
 
             
-              <Link href="#heroContact" passHref><a><HeaderButton onClick={()=>inputRef.current.focus()}>{isVi ? "Trao doi ngay" : "Lets Talk"}</HeaderButton></a></Link>
+              <Link href="#heroContact" passHref><a><HeaderButton onClick={()=>inputRef.current.focus()}>{isVi ? "Trao đổi ngay" : "Lets Talk"}</HeaderButton></a></Link>
             
 
             <StarDiv role="img" aria-label="5 out of 5 stars">
@@ -160,7 +160,7 @@ const HeroSection = () => {
               <StarImg src="/images/star svg.svg" alt="" aria-hidden="true"></StarImg>
             </StarDiv>
 
-            <ShowText>{isVi ? "Khong chi la loi hua, chung toi chung minh bang ket qua." : "We&apos;re not just promising, we&apos;re proving."}</ShowText>
+            <ShowText>{isVi ? "Không chỉ là lời hứa, chúng tôi chứng minh bằng kết quả." : "We&apos;re not just promising, we&apos;re proving."}</ShowText>
 
             <PeopleFaces src="/images/clients-dawn.png" alt="clients prfoile images"></PeopleFaces>
 

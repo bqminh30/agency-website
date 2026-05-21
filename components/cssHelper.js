@@ -67,7 +67,7 @@ export const MainHeading = css`
     line-height: ${({ theme }) => theme.fontSizes?.s};
   }*/
   font-size: 3.5rem;
-  font-family: "Grifter-bold", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   @media (max-width: 1031px) {
     font-size: 3rem;
   };

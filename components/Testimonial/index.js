@@ -63,7 +63,7 @@ function Testimonial() {
                     <AiFillStar />
                 </StarDiv>
                 <TestimonialHeader>
-                    {isVi ? "Khach Hang Danh Gia Cao" : "Loved by Clients"}
+                    {isVi ? "Khách Hàng Đánh Giá Cao" : "Loved by Clients"}
                     <ArrowDiv>
                         <BsFillArrowLeftCircleFill onClick={handlePrev}  aria-label="Previous testimonial"
           role="button"></BsFillArrowLeftCircleFill>

@@ -33,11 +33,11 @@ const Values = () => {
         <ValuesParentWrapper>
 
         <ValuesLeftSection>
-          <ValuesLeftHeadline><ValuesLeftHeadlineItalic>Gia tri cot loi</ValuesLeftHeadlineItalic>chung toi luon theo duoi</ValuesLeftHeadline>
+          <ValuesLeftHeadline><ValuesLeftHeadlineItalic>Giá trị cốt lõi</ValuesLeftHeadlineItalic>chúng tôi luôn theo đuổi</ValuesLeftHeadline>
           <ValuesLeftBottomWrapper>
-            <ValuesLeftParagraph><ValuesLeftParagraphBold>Khong bo lo.</ValuesLeftParagraphBold> Chung toi se cap nhat thuong xuyen du an moi nhat va lich san sang ho tro</ValuesLeftParagraph>
+            <ValuesLeftParagraph><ValuesLeftParagraphBold>Không bỏ lỡ.</ValuesLeftParagraphBold> Chúng tôi sẽ cập nhật thường xuyên dự án mới nhất và lịch sẵn sàng hỗ trợ</ValuesLeftParagraph>
             <ValuesLeftInputContainer>
-              <ValuesLeftInput placeholder="Email cua ban"/><ValuesLeftInputButton>Theo doi</ValuesLeftInputButton>
+              <ValuesLeftInput placeholder="Email của bạn"/><ValuesLeftInputButton>Theo dõi</ValuesLeftInputButton>
             </ValuesLeftInputContainer>
           </ValuesLeftBottomWrapper>
         </ValuesLeftSection>
@@ -54,9 +54,9 @@ const Values = () => {
               {/* <FirstIcon/> */}<PerfectionImage src="/images/target-2997217-2516255.png" alt="image"/> 
               </ValuesRightIconContiner>
                 <ValuesRightTextContiner>
-                <ValuesRightCardTitle>Chi tiet chuan xac</ValuesRightCardTitle>
+                <ValuesRightCardTitle>Chi tiết chuẩn xác</ValuesRightCardTitle>
                 <ValuesRightCardDescription>
-                Chung toi toi uu tung chi tiet de giao dien hien thi can doi, dung chuan tren moi man hinh
+                Chúng tôi tối ưu từng chi tiết để giao diện hiển thị cân đối, đúng chuẩn trên mọi màn hình
                 </ValuesRightCardDescription>
                 </ValuesRightTextContiner>
               </ValuesRightCard>
@@ -67,9 +67,9 @@ const Values = () => {
               {/* <FirstIcon/> */}<DeadlineImage src="/images/task-deadline-4721435-3926023.png" alt="image"/>
               </ValuesRightIconContiner>
                 <ValuesRightTextContiner>
-                <ValuesRightCardTitle>Dung tien do</ValuesRightCardTitle>
+                <ValuesRightCardTitle>Đúng tiến độ</ValuesRightCardTitle>
                 <ValuesRightCardDescription>
-                Tien do duoc cap nhat lien tuc de xu ly van de nhanh va dam bao deadline
+                Tiến độ được cập nhật liên tục để xử lý vấn đề nhanh và đảm bảo deadline
                 </ValuesRightCardDescription>
                 </ValuesRightTextContiner>
               </ValuesRightCard>
@@ -80,9 +80,9 @@ const Values = () => {
               {/* <FirstIcon/> */}<UpdatedeImage src="/images/design-shape-4119272-3420376.png" alt="image"/>
               </ValuesRightIconContiner>
                 <ValuesRightTextContiner>
-                <ValuesRightCardTitle>Cap nhat xu huong</ValuesRightCardTitle>
+                <ValuesRightCardTitle>Cập nhật xu hướng</ValuesRightCardTitle>
                 <ValuesRightCardDescription>
-                Doi ngu thiet ke luon cap nhat phong cach moi nhat phu hop voi thuong hieu cua ban
+                Đội ngũ thiết kế luôn cập nhật phong cách mới nhất phù hợp với thương hiệu của bạn
                 </ValuesRightCardDescription>
                 </ValuesRightTextContiner>
               </ValuesRightCard>
@@ -93,9 +93,9 @@ const Values = () => {
               {/* <FirstIcon/> */}<TransparentImage src="/images/customer-reviews-4861322-4051644.png" alt="image"/>
               </ValuesRightIconContiner>
                 <ValuesRightTextContiner>
-                <ValuesRightCardTitle>Minh bach</ValuesRightCardTitle>
+                <ValuesRightCardTitle>Minh bạch</ValuesRightCardTitle>
                 <ValuesRightCardDescription>
-                Quy trinh ro rang, giao tiep minh bach de cung ban dat muc tieu kinh doanh
+                Quy trình rõ ràng, giao tiếp minh bạch để cùng bạn đạt mục tiêu kinh doanh
                 </ValuesRightCardDescription>
                 </ValuesRightTextContiner>
               </ValuesRightCard>

@@ -44,7 +44,7 @@ export const Container = styled.div`
 export const ServiceHeader = styled.div`
   width: ${({ theme }) => theme.width[10]};
   margin-top: 3rem;
-  font-family: "Grifter-bold", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   margin-bottom: 0.1rem;
   color: #1d1a26;
   margin-bottom: 2rem;
@@ -255,7 +255,7 @@ export const ServiceTitle = styled.h2`
   width: 100%;
   padding: 20px 0px 5px 0px;
   text-align: center;
-  font-family: "Plus Jakarta sans",sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     

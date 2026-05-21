@@ -72,8 +72,8 @@ const OurWorks = () => {
       <Container>
         <WorkHeader>
           <div>
-            <WorkHeading>{isVi ? "Du An Moi Nhat" : "Latest Projects"}</WorkHeading>
-            <SubHeading>{isVi ? "Thiet ke chat luong cao, xung tam thuong hieu cua ban." : "Award winning designs, and nothing less."}</SubHeading>
+            <WorkHeading>{isVi ? "Dự Án Mới Nhất" : "Latest Projects"}</WorkHeading>
+            <SubHeading>{isVi ? "Thiết kế chất lượng cao, xứng tầm thương hiệu của bạn." : "Award winning designs, and nothing less."}</SubHeading>
           </div>
           <ArrowDiv>
               <BsArrowLeft onClick={handlePrev}></BsArrowLeft>

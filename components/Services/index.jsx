@@ -35,11 +35,11 @@ const Services = () => {
     <Section id="services">
       <Container>
         <ServiceHeader>
-          <WhatWeDo>{isVi ? "Chung Toi Lam Gi" : "What We do"}</WhatWeDo>
+          <WhatWeDo>{isVi ? "Chúng Tôi Làm Gì" : "What We do"}</WhatWeDo>
           <ServiceHeadingDiv>
-            <ServiceHeading>{isVi ? "Dich Vu Chung Toi Cung Cap" : "Services We Offer"}</ServiceHeading>
+            <ServiceHeading>{isVi ? "Dịch Vụ Chúng Tôi Cung Cấp" : "Services We Offer"}</ServiceHeading>
             <Link href='#contact-us'>
-             <ContactButton>{isVi ? "Lien He" : "Contact Us"}</ContactButton>
+             <ContactButton>{isVi ? "Liên Hệ" : "Contact Us"}</ContactButton>
             </Link>
           </ServiceHeadingDiv>
         </ServiceHeader>
@@ -62,11 +62,11 @@ const Services = () => {
                 src="/images/website development.svg"></ServiceImage>
            
                 <ServiceTitle>
-                  {isVi ? "Phat Trien Website" : "Web Development"}
+                  {isVi ? "Phát Triển Website" : "Web Development"}
                 </ServiceTitle>
               
               <ServiceDetails>
-              {isVi ? "Xay dung website toi uu de mo rong kinh doanh va tang truong ben vung." : "Get the most out of web development and grow your business."}
+              {isVi ? "Xây dựng website tối ưu để mở rộng kinh doanh và tăng trưởng bền vững." : "Get the most out of web development and grow your business."}
               </ServiceDetails>
               
 
@@ -87,11 +87,11 @@ const Services = () => {
                 src="/images/app development.svg"></ServiceImage>
               
                 <ServiceTitle>
-                  {isVi ? "Phat Trien Ung Dung" : "App Development"}
+                  {isVi ? "Phát Triển Ứng Dụng" : "App Development"}
                 </ServiceTitle>
               
               <ServiceDetails>
-                {isVi ? "Giai phap phat trien ung dung di dong giup ban tiep can dung nhom khach hang muc tieu." : "Mobile app development solutions that help you reach your target audience."}
+                {isVi ? "Giải pháp phát triển ứng dụng di động giúp bạn tiếp cận đúng nhóm khách hàng mục tiêu." : "Mobile app development solutions that help you reach your target audience."}
               </ServiceDetails>             
               
             </Service>
@@ -115,7 +115,7 @@ const Services = () => {
                 </ServiceTitle>
               
               <ServiceDetails>
-                <p>{isVi ? "Giai phap digital marketing chien luoc de thuc day tang truong kinh doanh." : "Strategic Digital Marketing Solutions for Business Growth"}</p>   
+                <p>{isVi ? "Giải pháp digital marketing chiến lược để thúc đẩy tăng trưởng kinh doanh." : "Strategic Digital Marketing Solutions for Business Growth"}</p>   
               </ServiceDetails>
               
             </Service>

@@ -61,17 +61,17 @@ const HomePage = () => {
       <FAQ />
       <ContactUs />
       <FloatingButtonStack>
-        <a target='_blank' href="https://wa.me/84362592858" aria-label="Nhan tin qua WhatsApp">
+        <a target='_blank' href="https://wa.me/84362592858" aria-label="Nhắn tin qua WhatsApp">
           <FloatingButton $brand="#25D366" initial={{ opacity: 0 , y:25}} whileInView={{ opacity: 1, y:0 }}>
             <FloatingButtonIcon><BsWhatsapp /></FloatingButtonIcon>
           </FloatingButton>
         </a>
-        <a target='_blank' href="https://zalo.me/0362592858" aria-label="Nhan tin qua Zalo">
+        <a target='_blank' href="https://zalo.me/0362592858" aria-label="Nhắn tin qua Zalo">
           <FloatingButton $brand="#0068FF" initial={{ opacity: 0 , y:25}} whileInView={{ opacity: 1, y:0 }}>
             <FloatingButtonIcon><SiZalo /></FloatingButtonIcon>
           </FloatingButton>
         </a>
-        <a target='_blank' href="https://www.facebook.com/buiquangminh30" aria-label="Nhan tin qua Facebook">
+        <a target='_blank' href="https://www.facebook.com/buiquangminh30" aria-label="Nhắn tin qua Facebook">
           <FloatingButton $brand="#0084FF" initial={{ opacity: 0 , y:25}} whileInView={{ opacity: 1, y:0 }}>
             <FloatingButtonIcon><FaFacebookMessenger /></FloatingButtonIcon>
           </FloatingButton>

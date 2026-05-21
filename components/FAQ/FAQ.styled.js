@@ -114,7 +114,7 @@ ${MainHeading}
 /*line-height:140%;
 margin-top: 0 !important;
 font-size: 3.5rem;
-font-family: "Grifter-bold", sans-serif;
+font-family: "Be Vietnam Pro", sans-serif;
 margin-bottom: 2.5rem;
 text-align: center;
 

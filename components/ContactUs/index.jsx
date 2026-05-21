@@ -108,7 +108,7 @@ const ContactUs = () => {
       <Container>
         <UpperSection>
           <TitleContact>
-            {isVi ? "Hãy cùng trao đổi về dự án của bạn" : "Let's Discuss Your Project"}
+            {isVi ? "Hãy cùng trao đổi về dự án của bạn" : "Hãy cùng trao đổi về dự án của bạn"}
           </TitleContact>
         </UpperSection>
         <BottomSection>
@@ -116,12 +116,12 @@ const ContactUs = () => {
             <ContactDetails>
               <Contact>
                 <DetailIcons>
-                  <MailIcon aria-label="Send email" />
+                  <MailIcon aria-label="Gửi email" />
                 </DetailIcons>
                 <Detail>
                   <DetailTitle>Email</DetailTitle>
                   <Link href="mailto:bqminh30@gmail.com" passHref>
-                    <a aria-label="Send email to bqminh30@gmail.com">
+                    <a aria-label="Gửi email tới bqminh30@gmail.com">
                       <DetailDescription>bqminh30@gmail.com</DetailDescription>
                     </a>
                   </Link>
@@ -130,12 +130,12 @@ const ContactUs = () => {
 
               <Contact>
                 <DetailIcons>
-                  <PhoneIcon aria-label="Call phone" />
+                  <PhoneIcon aria-label="Gọi điện" />
                 </DetailIcons>
                 <Detail>
-                  <DetailTitle>{isVi ? "Điện thoại" : "Phone"}</DetailTitle>
+                  <DetailTitle>Điện thoại</DetailTitle>
                   <Link href="tel:0362592858" passHref>
-                    <a aria-label="Call 0362592858">
+                    <a aria-label="Gọi 0362592858">
                       <DetailDescription>0362592858</DetailDescription>
                     </a>
                   </Link>
@@ -144,23 +144,23 @@ const ContactUs = () => {
 
               <Contact>
                 <DetailIcons>
-                  <SocialIcon aria-label="Social links" />
+                  <SocialIcon aria-label="Liên kết mạng xã hội" />
                 </DetailIcons>
                 <Detail>
-                  <DetailTitle>Social</DetailTitle>
+                  <DetailTitle>Mạng xã hội</DetailTitle>
                   <SocialDiv>
                     <Link href="https://www.linkedin.com/in/quangminh30/" passHref>
-                      <a aria-label="Open LinkedIn" target="_blank" rel="noopener noreferrer">
+                      <a aria-label="Mở LinkedIn" target="_blank" rel="noopener noreferrer">
                         <DetailDescription>LinkedIn</DetailDescription>
                       </a>
                     </Link>
                     <Link href="https://zalo.me/0362592858" passHref>
-                      <a aria-label="Open Zalo" target="_blank" rel="noopener noreferrer">
+                      <a aria-label="Mở Zalo" target="_blank" rel="noopener noreferrer">
                         <DetailDescription>Zalo</DetailDescription>
                       </a>
                     </Link>
                     <Link href="https://t.me/bqm30" passHref>
-                      <a aria-label="Open Telegram" target="_blank" rel="noopener noreferrer">
+                      <a aria-label="Mở Telegram" target="_blank" rel="noopener noreferrer">
                         <DetailDescription>Telegram</DetailDescription>
                       </a>
                     </Link>
@@ -177,46 +177,46 @@ const ContactUs = () => {
 
           <RightSection>
             <Form onSubmit={submit} id="contact-form">
-              <GetaQuote>{isVi ? "Nhận báo giá" : "Get a quote"}</GetaQuote>
+              <GetaQuote>Nhận báo giá</GetaQuote>
               <ContactForm>
-                <label htmlFor="contact-name">{isVi ? "Xin chào, Tôi là" : "Hey, my name is"}</label>&nbsp;
+                <label htmlFor="contact-name">Xin chào, tôi là</label>&nbsp;
                 <NameInput
                   id="contact-name"
                   type="text"
                   value={sender_name}
-                  placeholder={isVi ? " Tên của bạn" : " Your name"}
+                  placeholder="Tên của bạn"
                   onChange={(e) => set_sender_name(e.target.value)}
                   required
                 />
 
-                &nbsp;<label htmlFor="contact-service">{isVi ? "Tôi đang cần ?" : "and I'm looking for"}</label>&nbsp;
+                &nbsp;<label htmlFor="contact-service">Tôi đang cần</label>&nbsp;
                 <Dropdowns
                   id="contact-service"
                   value={sender_service}
                   onChange={(e) => set_sender_service(e.target.value)}
                   required
                 >
-                  <option value="Web Development">{isVi ? "Phát triển website" : "Web Development"}</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="App Development">{isVi ? "Phát triển ứng dụng" : "App Development"}</option>
+                  <option value="Web Development">Phát triển website</option>
+                  <option value="Digital Marketing">Tiếp thị số</option>
+                  <option value="App Development">Phát triển ứng dụng</option>
                 </Dropdowns>
 
-                <label htmlFor="contact-email">{isVi ? "Email của bạn" : "Ping us at"}</label>&nbsp;
+                <label htmlFor="contact-email">Email của bạn</label>&nbsp;
                 <EmailInput
                   id="contact-email"
                   type="email"
                   value={sender_email}
-                  placeholder={isVi ? "Địa chỉ email" : " Your email address"}
+                  placeholder="Địa chỉ email"
                   onChange={(e) => set_sender_email(e.target.value)}
                   required
                 />
 
-                <label htmlFor="contact-phone">{isVi ? "Số điện thoại" : "Contact number"}</label>&nbsp;
+                <label htmlFor="contact-phone">Số điện thoại</label>&nbsp;
                 <PhoneInput
                   id="contact-phone"
                   type="tel"
                   value={sender_phone}
-                  placeholder={isVi ? " Số điện thoại của bạn" : " Your phone number"}
+                  placeholder="Số điện thoại của bạn"
                   onChange={(e) => set_sender_phone(e.target.value)}
                   required
                 />
@@ -231,14 +231,12 @@ const ContactUs = () => {
                     checked={check}
                   />
                   <CheckboxTitle style={{color: "black"}}> 
-                    {isVi
-                      ? "Tôi đã đồng ý với tất cả điều kiện và điều khoản"
-                      : "I have accepted all the terms and conditions"}
+                    Tôi đã đồng ý với tất cả điều kiện và điều khoản
                   </CheckboxTitle>
                 </label>
               </TermsCheckbox>
 
-              <SubmitForm type="submit">{isVi ? "Gửi yêu cầu" : "Send Enquiry"}</SubmitForm>
+              <SubmitForm type="submit">Gửi yêu cầu</SubmitForm>
             </Form>
           </RightSection>
         </BottomSection>

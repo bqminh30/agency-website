@@ -33,7 +33,7 @@ const FAQ = () => {
   return (
     <Section>
       <Container>
-        <FaqHeader>{isVi ? "Cau Hoi Thuong Gap" : "Frequently Asked Questions"}</FaqHeader>
+        <FaqHeader>{isVi ? "Câu Hỏi Thường Gặp" : "Frequently Asked Questions"}</FaqHeader>
         {data.map((item, index) => {
           return (
             <FaqsSection key={item.id}>

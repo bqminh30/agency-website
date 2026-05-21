@@ -57,7 +57,7 @@ export const Heading = styled(motion.h1)`
   word-wrap: break-word;
   word-spacing:1px;
   color:#FFF2F2;
-  font-family: "Grifter-bold", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   font-weight:800;
   font-size:3rem;
   line-height:80px;
@@ -80,7 +80,7 @@ export const HeroDescription = styled(motion.p)`
   ${Paragraph};
   color:#FFF2F2;
   opacity:0.9;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   font-weight:500;
   margin-top: 25px;
   font-size: 20px;

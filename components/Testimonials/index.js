@@ -60,7 +60,7 @@ function Testimonials() {
                 {index === current && (
                   <>
                     <SliderLeft>
-                      <SliderTitle>{isVi ? "Khach Hang Danh Gia Cao" : "Loved by Clients"}</SliderTitle>
+                      <SliderTitle>{isVi ? "Khách Hàng Đánh Giá Cao" : "Loved by Clients"}</SliderTitle>
                       <AnimatePresence exitBeforeEnter>
                         <SliderContent
                           key={slide.Name}

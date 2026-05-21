@@ -92,7 +92,7 @@ export const TitleContact = styled.h2`
   ${flexColumn}
   width: 70%;
   margin-bottom:5rem;
-  font-family: "Grifter-bold", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   position: relative;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 100%;

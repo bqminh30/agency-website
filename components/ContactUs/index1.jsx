@@ -37,7 +37,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { send } from "emailjs-com";
 import Link from "next/link";
+import { useLanguage } from "../LanguageContext";
 const ContactUs1 = (props) => {
+  const { language } = useLanguage();
+  const isVi = language === "vi";
   const [sender_email, set_sender_email] = useState("");
   const [sender_phone, set_sender_phone] = useState("");
   const [sender_name, set_sender_name] = useState("");
@@ -88,7 +91,6 @@ const ContactUs1 = (props) => {
 
   const SheetSubmit = (e) => {
     e.preventDefault();
-    // console.log(name,email,message)
     const data = {
       Name: sender_name,
       Email: sender_email,
@@ -157,15 +159,14 @@ const ContactUs1 = (props) => {
       transition={{delay:2}}
     >
       <Form onSubmit={submit}>
-        <GetaQuote>Get a quote</GetaQuote>
-        {/* <ScheduleP>Schedule an Appointment</ScheduleP> */}
+        <GetaQuote>{isVi ? "Nhận báo giá" : "Get a quote"}</GetaQuote>
         <ContactForm>
-        <label htmlFor="name">  Hey👋my name is </label> &nbsp;
+        <label htmlFor="name">  {isVi ? "Xin chào 👋 Tôi là" : "Hey👋my name is"} </label> &nbsp;
           <NameInput
             id="name"
             type="text"
             value={sender_name}
-            placeholder="&nbsp; Your name"
+            placeholder={isVi ? "\u00A0 Tên của bạn" : "\u00A0 Your name"}
             onChange={(e) => {
               set_sender_name(e.target.value);
               setName(e.target.value);
@@ -173,39 +174,39 @@ const ContactUs1 = (props) => {
             required
           />
 
-&nbsp;<label htmlFor="service"> and I&apos;m looking for </label>&nbsp;
+&nbsp;<label htmlFor="service"> {isVi ? "Tôi đang cần" : "and I\u0027m looking for"} </label>&nbsp;
           <Dropdowns
           id="service"
             value={sender_service}
-            placeholder="&nbsp; Select a service"
+            placeholder={isVi ? "\u00A0 Chọn dịch vụ" : "\u00A0 Select a service"}
             onChange={(e) => {
               set_sender_service(e.target.value);
             }}
             required
           >
-            <option value="Web Development">Web Development</option>
+            <option value="Web Development">{isVi ? "Phát triển website" : "Web Development"}</option>
             <option value="Digital Marketing">Digital Marketing</option>
-            <option value="App Developement">App Development</option>
+            <option value="App Developement">{isVi ? "Phát triển ứng dụng" : "App Development"}</option>
           </Dropdowns>
           <br />
-          <label htmlFor="email">Ping us at 😉</label>&nbsp;
+          <label htmlFor="email">{isVi ? "Email của bạn 😉" : "Ping us at 😉"}</label>&nbsp;
           <EmailInput
            id="email"
             type="email"
             value={sender_email}
-            placeholder="&nbsp; Your Email Address"
+            placeholder={isVi ? "\u00A0 Địa chỉ email" : "\u00A0 Your Email Address"}
             onChange={(e) => {
               set_sender_email(e.target.value);
               setEmail(e.target.value);
             }}
             required
           />
-               <label htmlFor="phone">Contact number📞</label>&nbsp;
+               <label htmlFor="phone">{isVi ? "Số điện thoại 📞" : "Contact number📞"}</label>&nbsp;
           <PhoneInput
             id="phone"
             type="tel"
             value={sender_phone}
-            placeholder="Your Phone Number"
+            placeholder={isVi ? "Số điện thoại của bạn" : "Your Phone Number"}
             onChange={(e) => {
               set_sender_phone(e.target.value);
               setPhone(e.target.value);
@@ -223,11 +224,11 @@ const ContactUs1 = (props) => {
             required
           />
           <CheckboxTitle>
-            I have accepted all the terms and conditions
+            {isVi ? "Tôi đã đồng ý với tất cả điều kiện và điều khoản" : "I have accepted all the terms and conditions"}
           </CheckboxTitle>
           </label>
         </TermsCheckbox>
-        <SubmitForm type="Submit">Send Enquiry</SubmitForm>
+        <SubmitForm type="Submit">{isVi ? "Gửi yêu cầu" : "Send Enquiry"}</SubmitForm>
       </Form>
     </HeroForm>
   );

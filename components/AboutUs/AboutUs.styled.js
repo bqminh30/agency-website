@@ -45,7 +45,7 @@ export const AboutTitle = styled.h2`
   word-wrap: break-word;
   color: #000000;
   text-align: left;
-  font-family: "Grifter-bold", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   font-size: 3.5rem;
   letter-spacing: 1px;
   padding-bottom:1px;
@@ -95,7 +95,7 @@ export const AboutDescription = styled.p`
   font-size: 18px;
   line-height: 30px;
   width: ${({ theme }) => theme.width[10]};
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   text-align: left;
   color:#0D0A19;
   margin-bottom:10px;

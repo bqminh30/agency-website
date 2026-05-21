@@ -77,7 +77,7 @@ export const TestimonialHeader = styled.div`
     margin-top: 0 !important;
     font-size: 3.5rem;
     margin-bottom: 2.5rem;
-    font-family: "Grifter-bold", sans-serif;
+    font-family: "Be Vietnam Pro", sans-serif;
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}){
     font-size: 33px;

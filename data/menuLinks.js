@@ -9,10 +9,10 @@ const getMenuLinks = (language = "vi") => {
   }
 
   return [
-    { name: "Trang chu", to: "#hero-section", id: 1 },
-    { name: "Gioi thieu", to: "#about-us", id: 2 },
-    { name: "Du an", to: "#our-works", id: 3 },
-    { name: "Lien he", to: "#contact-us", id: 4 },
+    { name: "Trang chủ", to: "#hero-section", id: 1 },
+    { name: "Giới thiệu", to: "#about-us", id: 2 },
+    { name: "Dự án", to: "#our-works", id: 3 },
+    { name: "Liên hệ", to: "#contact-us", id: 4 },
   ];
 };
 

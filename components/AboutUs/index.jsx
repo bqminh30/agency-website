@@ -30,17 +30,17 @@ const AboutUs = () => {
               <AboutImage src="/images/about.jpeg" alt="Two female team members discussing project"/>
             </AboutImageDiv>
             <AboutContent>
-              <AboutTitle>{isEn ? "About Us" : "Ve Chung Toi"}</AboutTitle>
+              <AboutTitle>{isEn ? "About Us" : "Về Chúng Tôi"}</AboutTitle>
               <AboutDescription>
               {isEn
                 ? "We focus on building tailored solutions that help your business grow, increase revenue, and improve overall performance. By understanding your specific needs and real-world challenges, Dawn works with you to deliver practical and sustainable business outcomes."
-                : `Chung toi tap trung phat trien cac giai phap giup doanh nghiep cua ban tang truong,
-              gia tang doanh so va toi uu hieu qua kinh doanh. Bang viec hieu ro nhu cau cu the,
-              phan tich thach thuc thuc te va xay dung giai phap phu hop, Dawn dong hanh cung ban
-              de dat duoc cac muc tieu kinh doanh ben vung.`}
+                : `Chúng tôi tập trung phát triển các giải pháp giúp doanh nghiệp của bạn tăng trưởng,
+              gia tăng doanh số và tối ưu hiệu quả kinh doanh. Bằng việc hiểu rõ nhu cầu cụ thể,
+              phân tích thách thức thực tế và xây dựng giải pháp phù hợp, Dawn đồng hành cùng bạn
+              để đạt được các mục tiêu kinh doanh bền vững.`}
               </AboutDescription>
               <Link href='#contact-us'>
-                <AboutButton>{isEn ? "Accelerate Your Growth" : "Tang toc tang truong"}</AboutButton>
+                <AboutButton>{isEn ? "Accelerate Your Growth" : "Tăng tốc tăng trưởng"}</AboutButton>
                 </Link>
             </AboutContent>
           </AboutBelow>

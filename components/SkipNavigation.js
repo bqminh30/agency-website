@@ -1,6 +1,7 @@
 // SkipNavigation.js
 import React from 'react';
 import styled from 'styled-components';
+import { useLanguage } from './LanguageContext';
 
 const SkipLink = styled.a`
   position: absolute;
@@ -18,12 +19,23 @@ const SkipLink = styled.a`
   }
 `;
 
-const SkipNavigation = () => (
-  <>
-    <SkipLink href="#main-content" className="skip-link">Skip to Main Content</SkipLink>
-    <SkipLink href="#main-menu" className="skip-link">Skip to Main Menu</SkipLink>
-    <SkipLink href="#footer" className="skip-link">Skip to Footer</SkipLink>
-  </>
-);
+const SkipNavigation = () => {
+  const { language } = useLanguage();
+  const isVi = language === 'vi';
+
+  return (
+    <>
+      <SkipLink href="#main-content" className="skip-link">
+        {isVi ? 'Chuyển đến nội dung chính' : 'Skip to Main Content'}
+      </SkipLink>
+      <SkipLink href="#main-menu" className="skip-link">
+        {isVi ? 'Chuyển đến menu chính' : 'Skip to Main Menu'}
+      </SkipLink>
+      <SkipLink href="#footer" className="skip-link">
+        {isVi ? 'Chuyển đến chân trang' : 'Skip to Footer'}
+      </SkipLink>
+    </>
+  );
+};
 
 export default SkipNavigation;

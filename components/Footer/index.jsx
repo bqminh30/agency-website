@@ -11,14 +11,14 @@ const Footer = () => {
   return (
     <Section>
       <Container>
-        <FooterTitles>&copy; {year} {isVi ? 'Ban quyen da duoc bao ho' : 'All Rights Reserved'}</FooterTitles>
+        <FooterTitles>&copy; {year} {isVi ? 'Bản quyền đã được bảo hộ' : 'All Rights Reserved'}</FooterTitles>
         <FooterTitles>
-          {isVi ? 'Thiet ke va phat trien boi' : 'Designed And Developed By'}{' '}
+          {isVi ? 'Thiết kế và phát triển bởi' : 'Designed And Developed By'}{' '}
           <strong>Quang Minh</strong>
         </FooterTitles>
         <Link href="mailto:bqminh30@gmail.com"><FooterTitles>bqminh30@gmail.com</FooterTitles></Link>
       </Container>
-      <CompanyLine>{isVi ? 'Cong Ty TNHH MTV Quang Minh Group' : 'Quang Minh Group One Member Co., Ltd.'}</CompanyLine>
+      <CompanyLine>{isVi ? 'Công Ty TNHH MTV Quang Minh Group' : 'Quang Minh Group One Member Co., Ltd.'}</CompanyLine>
     </Section>
   );
 };
