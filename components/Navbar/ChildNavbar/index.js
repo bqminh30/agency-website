@@ -1,6 +1,6 @@
 import React,{ useState, useEffect } from "react";
 import getMenuLinks from "../../../data/menuLinks";
-import LogoImage from "/public/images/62375b2bd5c8856bf9e4f5df_Logo.png";
+import LogoImage from "/public/logo-dawn.jpg";
 import {
   LanguageSwitcher,
   LanguageToggle,
@@ -44,7 +44,7 @@ const ChildNavbar = ({ toggle}) => {
     <Nav  scrollNav={scrollNav} >
       <NavContainer>
         <NavLink href="/">
-         <NavLinkA aria-label="Home">{LogoValue === "text" ? <Link href="/"><LogoText>Quang Minh.</LogoText></Link> :<Logo src={LogoImage.src} alt="logo" />}</NavLinkA>
+         <NavLinkA aria-label="Home">{LogoValue === "text" ? <Link href="/"><LogoText>Quang Minh Group.</LogoText></Link> :<Logo src={LogoImage.src} alt="logo" />}</NavLinkA>
         </NavLink>
         <MobileMenu onClick={toggle}>
           <MenuIcon />

@@ -17,15 +17,15 @@ const LoadingScreen = () => {
   return (
     <Screen>
       <Container>
-        <Title>Quang Minh</Title>
+        <Title>Quang Minh Group</Title>
         <AccentLine />
         <Tagline>
-          {isVi ? "Đang tải nội dung" : "Đang tải nội dung"}
+          {isVi ? "Đang tải nội dung" : "Loading content"}
         </Tagline>
         <SubText>
           {isVi
             ? "Vui lòng chờ trong giây lát để tối ưu trải nghiệm cho bạn."
-            : "Vui lòng chờ trong giây lát để tối ưu trải nghiệm cho bạn."}
+            : "Please wait a moment to optimize your experience."}
         </SubText>
         <Loader aria-label="Đang tải" />
       </Container>
