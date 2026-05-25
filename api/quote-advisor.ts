@@ -3,6 +3,16 @@ function isInsufficientBalance(status: number, bodyText: string) {
   return /(insufficient|quota|credit|balance|out\s*of\s*funds|payment\s*required)/i.test(bodyText);
 }
 
+async function fetchWithTimeout(url: string, options: RequestInit, timeoutMs = 20000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 async function sendToTelegram(text: string) {
   const token = process.env.TELE_BOT_TOKEN || process.env.TELE_API_KEY || "";
   const chatId = process.env.TELE_CHAT_ID || "";
@@ -72,29 +82,34 @@ export default async function handler(req: any, res: any) {
     let modelUsed = deepseekModel;
 
     if (freeModelApiKey) {
-      const freeResponse = await fetch(`${freeModelBaseUrl}/v1/chat/completions`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${freeModelApiKey}`,
-        },
-        body: JSON.stringify({
-          model: freeModelModel,
-          messages,
-          temperature: 0.7,
-        }),
-      });
+      try {
+        const freeResponse = await fetchWithTimeout(`${freeModelBaseUrl}/v1/chat/completions`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${freeModelApiKey}`,
+          },
+          body: JSON.stringify({
+            model: freeModelModel,
+            messages,
+            temperature: 0.7,
+          }),
+        });
 
-      if (freeResponse.ok) {
-        const freeData = await freeResponse.json();
-        reply = freeData?.choices?.[0]?.message?.content || "";
-        provider = "freemodel";
-        modelUsed = freeModelModel;
-      } else {
-        const freeErrorText = await freeResponse.text();
-        if (!isInsufficientBalance(freeResponse.status, freeErrorText)) {
-          throw new Error(`FreeModel error: ${freeResponse.status} ${freeErrorText}`);
+        if (freeResponse.ok) {
+          const freeData = await freeResponse.json();
+          reply = freeData?.choices?.[0]?.message?.content || "";
+          provider = "freemodel";
+          modelUsed = freeModelModel;
+        } else {
+          const freeErrorText = await freeResponse.text();
+          const isQuotaError = isInsufficientBalance(freeResponse.status, freeErrorText);
+          console.warn(
+            `FreeModel failed (${freeResponse.status})${isQuotaError ? " quota/balance" : ""}, fallback to DeepSeek.`
+          );
         }
+      } catch (freeErr) {
+        console.warn("FreeModel request error, fallback to DeepSeek:", freeErr);
       }
     }
 
@@ -103,7 +118,7 @@ export default async function handler(req: any, res: any) {
         throw new Error("FreeModel hết quota và thiếu DEEPSEEK_API_KEY để fallback.");
       }
 
-      const deepseekResponse = await fetch("https://api.deepseek.com/v1/chat/completions", {
+      const deepseekResponse = await fetchWithTimeout("https://api.deepseek.com/v1/chat/completions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -291,7 +291,7 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
                 </div>
                 <div>
                   <span className="block text-[10px] text-gray-500 uppercase font-mono tracking-wider">{c.emailLabel}</span>
-                  <span className="text-sm font-medium font-mono text-white">support@qmg.tech</span>
+                  <span className="text-sm font-medium font-mono text-white">bqminh30@gmail.com</span>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -300,7 +300,7 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
                 </div>
                 <div>
                   <span className="block text-[10px] text-gray-500 uppercase font-mono tracking-wider">{lang === 'vi' ? 'ĐỊA CHỈ' : 'HEADQUARTERS'}</span>
-                  <span className="text-sm text-gray-300 leading-tight">Hanoi, Vietnam</span>
+                  <span className="text-sm text-gray-300 leading-tight">Tòa B - Imperia Garden, 143 Đ. Nguyễn Tuân, Thanh Xuân, Hà Nội, Việt Nam</span>
                 </div>
               </div>
             </div>
