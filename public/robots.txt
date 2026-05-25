@@ -3,5 +3,10 @@ User-agent: *
 Allow: /
 
 # Host & Sitemap definition
+<<<<<<< HEAD
 Host: https://quang-minh-group.vercel.app
 Sitemap: https://quang-minh-group.vercel.app/sitemap.xml
+=======
+Host: https://devagency.vn
+Sitemap: https://devagency.vn/sitemap.xml
+>>>>>>> 509944af7e68504def08571927813ddb0b4ed4ad

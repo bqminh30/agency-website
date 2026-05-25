@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "name": "Quang Minh Group",
   "description": "Customized software development, Web, Mobile, AI solutions, and specialized SEO services.",
+=======
+  "name": "DevAgency",
+  "description": "Website chính thức của DevAgency - Đơn vị tư vấn và triển khai giải pháp công nghệ, thiết kế UI/UX và phát triển website đột phá cho doanh nghiệp.",
+>>>>>>> 509944af7e68504def08571927813ddb0b4ed4ad
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

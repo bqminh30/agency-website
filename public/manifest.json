@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "short_name": "Quang Minh Group",
   "name": "Quang Minh Group - Bứt Phá Công Nghệ Số",
+=======
+  "short_name": "DevAgency",
+  "name": "DevAgency - Bứt Phá Công Nghệ Số",
+>>>>>>> 509944af7e68504def08571927813ddb0b4ed4ad
   "description": "Thiết kế UI/UX và phát triển website, ứng dụng SaaS, Thương mại điện tử đột phá.",
   "icons": [
     {
