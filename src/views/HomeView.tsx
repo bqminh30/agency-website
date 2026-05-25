@@ -18,7 +18,7 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
   const c = LOCALIZED_DATA[lang].contactPage;
 
   // Let's use the actual generated workspace hero path
-  const heroImgSrc = '/src/assets/images/workspace_hero_1779681117807.png';
+  const heroImgSrc = '/assets/images/workspace_hero_1779681117807.png';
 
   const featuredProjects = PROJECTS_LIST.slice(0, 2);
 
@@ -26,7 +26,7 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
     <div id="home-view" className="space-y-24 pb-20 animate-fade-in">
       
       {/* 1. Hero Section */}
-      <section id="hero-section" className="relative pt-8 sm:pt-16 pb-8 overflow-hidden">
+      <section id="hero-section" className="relative pt-8 sm:pt-16 pb-8 overflow-hidden bg-white border-y border-gray-200">
         {/* Abstract Glowing Accent */}
         <div className="absolute top-1/4 right-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -36,21 +36,21 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
             
             {/* Left Narrative Column */}
             <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/20 bg-cyan-950/20 text-cyan-400">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-300/60 bg-cyan-50 text-cyan-700">
                 <Terminal className="w-3.5 h-3.5" />
                 <span className="text-[11px] font-mono tracking-widest uppercase font-semibold">
                   {h.badge}
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight text-white leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight text-slate-900 leading-[1.1]">
                 {h.title}{' '}
                 <span className="bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-500 bg-clip-text text-transparent">
                   {h.titleAccent}
                 </span>
               </h1>
 
-              <p className="text-md sm:text-lg text-gray-400 leading-relaxed max-w-xl">
+              <p className="text-md sm:text-lg text-slate-600 leading-relaxed max-w-xl">
                 {h.subtitle}
               </p>
 
@@ -63,7 +63,7 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
                 </button>
                 <button
                   onClick={() => onNavigate('services')}
-                  className="px-8 py-3.5 rounded-xl font-medium text-gray-300 border border-gray-800 hover:text-white hover:bg-gray-900/40 hover:border-gray-700 transition text-center text-sm"
+                  className="px-8 py-3.5 rounded-xl font-medium text-slate-700 border border-gray-300 hover:text-slate-900 hover:bg-gray-100 transition text-center text-sm"
                 >
                   {h.btnServices}
                 </button>
@@ -95,7 +95,7 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
       </section>
 
       {/* 2. Brand Spotlight / About Compact */}
-      <section id="about-compact" className="border-t border-b border-gray-900/60 bg-[#0c1015]/40 py-16">
+      <section id="about-compact" className="border-y border-gray-900/60 bg-[#0c1015] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4">
           <span className="text-xs font-mono text-cyan-400 uppercase tracking-widest block font-semibold">
             LEAN POWERHOUSE
@@ -110,15 +110,16 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
       </section>
 
       {/* 3. Specialized Services Showcase */}
-      <section id="homepage-services" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="homepage-services" className="bg-white border-y border-gray-200 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-3 mb-12">
-          <span className="text-xs font-mono text-cyan-400 uppercase tracking-widest block">
+          <span className="text-xs font-mono text-slate-500 uppercase tracking-widest block">
             VERTICAL EXPERTISE
           </span>
-          <h2 className="text-3xl font-display font-bold text-white tracking-tight">
+          <h2 className="text-3xl font-display font-bold text-slate-900 tracking-tight">
             {s.title}
           </h2>
-          <p className="text-sm text-gray-400 max-w-md mx-auto">
+          <p className="text-sm text-slate-600 max-w-md mx-auto">
             {s.subtitle}
           </p>
         </div>
@@ -126,30 +127,23 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
         {/* Dynamic Services Bento-ish Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {s.cards.map((card, i) => {
-            const isDark = card.isDark;
             return (
               <div
                 key={card.id}
-                className={`rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1 relative group overflow-hidden ${
-                  isDark 
-                    ? 'border-blue-900 bg-gradient-to-b from-[#111827] to-[#0f172a] shadow-lg shadow-blue-950/20' 
-                    : 'border-gray-800/70 bg-[#161b22]/30 hover:border-gray-700'
-                }`}
+                className="rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gray-300 relative group overflow-hidden"
               >
                 {/* Accent glow bar */}
-                <div className={`absolute left-0 top-0 bottom-0 w-1 transition-all group-hover:bg-cyan-400 ${
-                  isDark ? 'bg-blue-500' : 'bg-transparent'
-                }`} />
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-transparent transition-all group-hover:bg-cyan-400" />
 
                 {card.tag && (
-                  <span className="absolute top-6 right-6 font-mono text-[9px] px-2 py-0.5 rounded border border-blue-500/30 text-blue-400 uppercase tracking-widest bg-blue-950/50">
+                  <span className="absolute top-6 right-6 font-mono text-[9px] px-2 py-0.5 rounded border border-cyan-300 text-cyan-700 uppercase tracking-widest bg-cyan-50">
                     {card.tag}
                   </span>
                 )}
 
                 <span className="text-xs font-mono text-cyan-400/80 mb-4 block">0{i + 1}</span>
-                <h3 className="text-lg font-display font-bold text-white mb-2">{card.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed mb-6">{card.desc}</p>
+                <h3 className="text-lg font-display font-bold text-slate-900 mb-2">{card.title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed mb-6">{card.desc}</p>
                 
                 <button 
                   onClick={() => onNavigate('services')}
@@ -162,10 +156,12 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
             );
           })}
         </div>
+        </div>
       </section>
 
       {/* 4. Why Us Grid & Core Stats */}
-      <section id="why-us-grid" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="why-us-grid" className="bg-[#0d1117] border-y border-gray-900 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:items-center">
           
           {/* Why choose narrative text */}
@@ -183,7 +179,7 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
 
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-6">
             {w.reasons.map((reason, idx) => (
-              <div key={reason.id} className="p-5 border border-gray-800 bg-[#161b22]/15 rounded-xl space-y-3">
+              <div key={reason.id} className="p-5 border border-gray-800 bg-[#161b22]/30 rounded-xl space-y-3">
                 <div className="p-3 w-10 h-10 rounded-lg bg-gray-900 flex items-center justify-center text-cyan-400">
                   {idx === 0 && <Cpu className="w-5 h-5" />}
                   {idx === 1 && <Shield className="w-5 h-5" />}
@@ -198,7 +194,7 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
           <div className="lg:col-span-5 grid grid-cols-2 gap-4">
             {w.stats.map((stat, i) => (
               <div key={i} className="p-6 bg-gradient-to-b from-[#161b22]/40 to-transparent border border-gray-900/80 rounded-xl text-center">
-                <p className="text-4xl font-display font-bold bg-gradient-to-r from-white via-cyan-100 to-cyan-400 bg-clip-text text-transparent mb-1">
+                <p className="text-4xl font-display font-bold text-white mb-1">
                   {stat.value}
                 </p>
                 <p className="text-[10px] font-mono uppercase tracking-wider text-gray-500">
@@ -209,16 +205,18 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
           </div>
 
         </div>
+        </div>
       </section>
 
       {/* 5. Representative Projects Highlights */}
-      <section id="home-projects" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 border-b border-gray-900 pb-6">
+      <section id="home-projects" className="bg-white border-y border-gray-200 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 border-b border-gray-200 pb-6">
           <div>
-            <span className="text-xs font-mono text-cyan-400 uppercase tracking-widest block">
+            <span className="text-xs font-mono text-slate-500 uppercase tracking-widest block">
               SELECTED CASES
             </span>
-            <h2 className="text-2xl font-display font-bold text-white tracking-tight">
+            <h2 className="text-2xl font-display font-bold text-slate-900 tracking-tight">
               {lang === 'vi' ? 'Dự Án Tiêu Biểu' : 'Featured Client Solutions'}
             </h2>
           </div>
@@ -236,9 +234,9 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
             <div
               key={proj.id}
               onClick={() => onNavigate('projects')}
-              className="group cursor-pointer rounded-2xl border border-gray-900 bg-[#0d1117]/40 overflow-hidden hover:border-gray-800/80 transition-all duration-300"
+              className="group cursor-pointer rounded-2xl border border-gray-200 bg-white overflow-hidden hover:border-gray-300 transition-all duration-300"
             >
-              <div className="aspect-[16/9] w-full bg-slate-950 overflow-hidden border-b border-gray-900 relative">
+              <div className="aspect-[16/9] w-full bg-slate-100 overflow-hidden border-b border-gray-200 relative">
                 <img
                   src={proj.image}
                   alt={proj.title}
@@ -250,15 +248,15 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
                 </span>
               </div>
               <div className="p-6 space-y-3">
-                <h3 className="text-lg font-display font-bold text-white group-hover:text-cyan-400 transition-colors">
+                <h3 className="text-lg font-display font-bold text-slate-900 group-hover:text-cyan-600 transition-colors">
                   {proj.title}
                 </h3>
-                <p className="text-xs text-gray-400 leading-relaxed line-clamp-2">
+                <p className="text-xs text-slate-600 leading-relaxed line-clamp-2">
                   {proj.description}
                 </p>
                 <div className="flex flex-wrap gap-1.5 pt-2">
                   {proj.tags.map(t => (
-                    <span key={t} className="text-[10px] font-mono px-2 py-0.5 bg-gray-900 text-gray-500 rounded">
+                    <span key={t} className="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-500 rounded">
                       {t}
                     </span>
                   ))}
@@ -267,10 +265,12 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
             </div>
           ))}
         </div>
+        </div>
       </section>
 
       {/* 6. Contact In-Home Form Section */}
-      <section id="home-contact" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="home-contact" className="bg-[#0d1117] border-y border-gray-900 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           <div className="lg:col-span-5 space-y-6 lg:pt-8">
@@ -310,6 +310,7 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
             <ContactForm lang={lang} />
           </div>
 
+        </div>
         </div>
       </section>
 
