@@ -1,10 +1,6 @@
 import express from "express";
 import path from "path";
 import { createServer as createViteServer } from "vite";
-<<<<<<< HEAD
-=======
-import { GoogleGenAI } from "@google/genai";
->>>>>>> 509944af7e68504def08571927813ddb0b4ed4ad
 import dotenv from "dotenv";
 
 dotenv.config();
