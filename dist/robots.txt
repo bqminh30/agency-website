@@ -1,0 +1,7 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Host & Sitemap definition
+Host: https://quang-minh-group.vercel.app
+Sitemap: https://quang-minh-group.vercel.app/sitemap.xml

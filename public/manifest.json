@@ -1,0 +1,17 @@
+{
+  "short_name": "Quang Minh Group",
+  "name": "Quang Minh Group - Bứt Phá Công Nghệ Số",
+  "description": "Thiết kế UI/UX và phát triển website, ứng dụng SaaS, Thương mại điện tử đột phá.",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#002B4D",
+  "theme_color": "#006C71",
+  "display": "standalone",
+  "orientation": "portrait"
+}
