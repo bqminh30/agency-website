@@ -26,7 +26,7 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
     <div id="home-view" className="space-y-24 pb-20 animate-fade-in">
       
       {/* 1. Hero Section */}
-      <section id="hero-section" className="relative pt-8 sm:pt-16 pb-8 overflow-hidden bg-white border-y border-gray-200">
+      <section id="hero-section" className="relative pt-8 sm:pt-16 pb-8 overflow-hidden bg-black border-y border-gray-900">
         {/* Abstract Glowing Accent */}
         <div className="absolute top-1/4 right-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -36,21 +36,21 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
             
             {/* Left Narrative Column */}
             <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-300/60 bg-cyan-50 text-cyan-700">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/40 bg-cyan-950/30 text-cyan-300">
                 <Terminal className="w-3.5 h-3.5" />
                 <span className="text-[11px] font-mono tracking-widest uppercase font-semibold">
                   {h.badge}
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight text-slate-900 leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight text-white leading-[1.1]">
                 {h.title}{' '}
                 <span className="bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-500 bg-clip-text text-transparent">
                   {h.titleAccent}
                 </span>
               </h1>
 
-              <p className="text-md sm:text-lg text-slate-600 leading-relaxed max-w-xl">
+              <p className="text-md sm:text-lg text-gray-300 leading-relaxed max-w-xl">
                 {h.subtitle}
               </p>
 
@@ -63,7 +63,7 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
                 </button>
                 <button
                   onClick={() => onNavigate('services')}
-                  className="px-8 py-3.5 rounded-xl font-medium text-slate-700 border border-gray-300 hover:text-slate-900 hover:bg-gray-100 transition text-center text-sm"
+                  className="px-8 py-3.5 rounded-xl font-medium text-gray-200 border border-gray-700 hover:text-white hover:bg-gray-900 transition text-center text-sm"
                 >
                   {h.btnServices}
                 </button>
