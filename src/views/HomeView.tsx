@@ -26,7 +26,7 @@ export default function HomeView({ lang, onNavigate, onOpenQuote }: HomeViewProp
     <div id="home-view" className="space-y-24 pb-20 animate-fade-in">
       
       {/* 1. Hero Section */}
-      <section id="hero-section" className="relative pt-8 sm:pt-16 pb-8 overflow-hidden bg-black border-y border-gray-900">
+      <section id="hero-section" className="relative pt-8 sm:pt-16 pb-8 overflow-hidden border-gray-900/60 bg-[#0c1015] border-y">
         {/* Abstract Glowing Accent */}
         <div className="absolute top-1/4 right-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
